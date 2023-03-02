@@ -1,0 +1,60 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block body %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">
+        {% if client.client %}
+        Modifier le client : {{ client.client }}
+        {% else %}
+        Ajouter un client
+        {% endif %}
+    </h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar" class="align-text-bottom"></span>
+        This week
+        </button>
+    </div>
+</div>
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_label(form.client, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.client, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.adresse, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.adresse, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.code_postal, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.code_postal, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.ville, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.ville, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.telephone, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.telephone, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.civilite, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.civilite, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.prenom, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.prenom, {'attr' : {'class' : 'form-control'}}) }}
+
+    {{ form_label(form.nom, null, {'label_attr' : {'class' : 'form-label'}}) }}
+    {{ form_widget(form.nom, {'attr' : {'class' : 'form-control'}}) }}
+
+    <button type="submit" class="btn btn-primary mt-3">Enregistrer</button>
+
+    {{ form_rest(form) }}
+
+{{ form_end(form) }}
+
+{% endblock %}

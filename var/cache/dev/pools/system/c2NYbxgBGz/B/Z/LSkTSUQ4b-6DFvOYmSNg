@@ -1,0 +1,67 @@
+<?php //App%255CController%255CDatawarehouseController%2523clientAjout
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        clone $p['Symfony\\Component\\Routing\\Annotation\\Route'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/client/ajouter',
+                '/client/editer/{id}',
+            ],
+            'methods' => [
+                [],
+                [
+                    'Get',
+                    'POST',
+                ],
+            ],
+            'schemes' => [
+                [],
+                [],
+            ],
+            'name' => [
+                'client_ajout',
+                'client_edition',
+            ],
+            'requirements' => [
+                [],
+                [
+                    'id' => '\\d+',
+                ],
+            ],
+            'options' => [
+                [],
+                [],
+            ],
+            'defaults' => [
+                [],
+                [],
+            ],
+            'host' => [
+                null,
+                null,
+            ],
+            'condition' => [
+                null,
+                null,
+            ],
+            'priority' => [
+                null,
+                null,
+            ],
+            'env' => [
+                null,
+                null,
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];
